@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0px;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+h1 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: lighter;
+  font-size: 100px;
+  margin: 0px;
+}
+h2 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: lighter;
+  font-size: 85px;
+  margin: 0px;
+}
+h3 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: lighter;
+  font-size: 65px;
+  margin: 0px;
+}
+h4 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-weight: lighter;
+  font-size: 50px;
+  margin: 0px;
+}
+.small_helvetica {
+  font-weight: 300;
+  font-size: 16px;
+  margin: 2px;
+}
+.normal_helvetica {
+  font-weight: 300;
+  font-size: 20px;
+  margin: 2px;
+}
+.big_helvetica {
+  font-weight: 100;
+  font-size: 24px;
+  margin: 2px;
+}
