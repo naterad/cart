@@ -101,7 +101,7 @@ main {
   height: 100vh;
   color: white;
   text-align: center;
-  background-image:url('../img/hardware_blue.jpeg');
+  background-image:url('../img/hardware_blue.jpg');
 }
 
 /* Slide 2 */
@@ -125,7 +125,7 @@ main {
 #slide-4 .bcg {
   /*padding: 100px;*/
   /*color:white;*/
-  background-image:url('../img/assorted.jpeg');
+  background-image:url('../img/assorted.jpg');
 }
 
 /* Slide 5 */

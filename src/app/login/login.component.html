@@ -1,10 +1,45 @@
-<p>
-  login works!
-</p>
-<h1>this is h1</h1>
+<div class="container">
+  <table style="width:100%;" class="">
+    <tr>
+      <th style="text-align:left;">
+        <img class="" src="/assets/img/white-logo.png" alt="logo" height="95px" >
+      </th>
+      <th style="text-align:right;">
+        <table class="nav_right">
+          <tr>
+            <!-- <th id="contact_button" class="small_helvetica">CONTACT</th> -->
+            <!-- <th class="small_helvetica" routerLink="/login">LOGIN</th> -->
+          </tr>
+        </table>
+      </th>
+    </tr>
+  </table>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="login_container">
+    <h3>LOGIN</h3>
+    <br>
+    <form #f="ngForm">
+      <input type="text" placeholder="Email" required [(ngModel)]="user.email_address" name="email_address"><br>
+      <input type="password" placeholder="Password" required [(ngModel)]="user.password" name="password"><br>
+      <br>
+      <button class="btn light_transparent_button" [disabled]="!f.form.valid" (click)="login()">Login</button>
+    </form>
+    <br>
+    <!-- <p>Don't have an account yet? <span class="link" routerLink="/register">Sign Up</span></p> -->
+    <p class="small_helvetica">© Copyright 2017. All Rights Reserved.</p>
+  </div>
+</div>
+
+
+
+<!-- <h1>this is h1</h1>
 <h2>this is h2</h2>
 <h3>this is h3</h3>
 <h4>this is h4</h4>
 <p class="small_helvetica">small-helvetica</p>
 <p class="normal_helvetica">normal-helvetica</p>
-<p class="big_helvetica">big-helvetica</p>
+<p class="big_helvetica">big-helvetica</p> -->
