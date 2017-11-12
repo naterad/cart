@@ -32,6 +32,7 @@ login(){
       obj => {
         // console.log(obj);
         // localStorage.setItem("token", obj["token"]);
+        localStorage.setItem("email", this.user.email_address);
         var link = ['/dashboard'];
         this.router.navigate(link);
       },
