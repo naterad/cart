@@ -1,4 +1,5 @@
-<div class="contianer">
+<!-- <div class="contianer"> -->
+<div>
   <table style="width:100%;" class="dashboard_nav">
     <tr>
       <th style="text-align:left;">
@@ -14,8 +15,24 @@
       </th>
     </tr>
   </table>
-
-  <div>
+  <div class="button_row">
+    <button class="btn dard_solid_button" (click)="toggleHeatmap()">heatmap</button>
+    <button class="btn dard_solid_button" (click)="togglePath()">path</button>
+    <button class="btn dard_solid_button" (click)="toggleData()">data</button>
+  </div>
+  <div *ngIf="dataShow">
     {{data}}
+  </div>
+  <div class="container">
+    <div class="options">
+        <label>Radius </label><input type="range" id="radius" value="10" min="5" max="30" #radius (change)="changeRadius(radius.value)"/><br />
+        <label>Blur </label><input type="range" id="blur" value="10" min="5" max="30" #blur (change)="changeBlur(blur.value)"/>
+    </div>
+    <!-- <canvas id="canvas" width="1000" height="600"></canvas> -->
+    <!-- <canvas id="canvas" width="300" height="170"></canvas> -->
+    <canvas id="canvas" width="600" height="340"></canvas>
+  </div>
+  <div class="path">
+    <canvas id="myCanvas" width="578" height="210"></canvas>
   </div>
 </div>
