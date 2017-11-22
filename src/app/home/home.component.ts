@@ -13,12 +13,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   ngAfterViewChecked() {
-    let self=this;
-    $("#contact_button").click(function() {
-      $('html, body').animate({
-          scrollTop: $("#slide-4").offset().top
-      }, 600);
-    });
+    // let self=this;
+    // $("#contact_button").click(function() {
+    //   $('html, body').animate({
+    //       scrollTop: $("#slide-4").offset().top
+    //   }, 600);
+    // });
   }
 
 }
