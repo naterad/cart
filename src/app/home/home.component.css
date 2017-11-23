@@ -8,6 +8,23 @@
 	bottom:0;
 	left:0;
 }
+#slide1 {
+  height: 100vh;
+  color: white;
+  text-align: center;
+  background: url('../../assets/img/hardware_blue.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#slide4 {
+  color: white;
+  text-align: center;
+  background: url('../../assets/img/assorted.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .dark_transparent {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -78,8 +95,8 @@
 }
 .slide-4_content {
   padding: 100px;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   color:white;
 }
 
