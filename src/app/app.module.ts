@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeatmapComponent } from './dashboard/heatmap/heatmap.component';
+import { PathmapComponent } from './dashboard/pathmap/pathmap.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
@@ -24,7 +26,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: '**',
@@ -33,12 +35,13 @@ const appRoutes: Routes = [
   }
 ];
 
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
+    HeatmapComponent,
+    PathmapComponent,
     HomeComponent
   ],
   imports: [

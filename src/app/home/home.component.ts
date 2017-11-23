@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -8,9 +9,10 @@ declare var $: any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   ngAfterViewChecked() {
     // let self=this;

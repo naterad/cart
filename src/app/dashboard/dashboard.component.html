@@ -5,34 +5,31 @@
       <th style="text-align:left;">
         <img class="" src="/assets/img/black-logo.png" alt="logo" height="65px" >
       </th>
-      <th style="text-align:right;">
-        <table class="nav_right">
+      <th style="text-align:right; padding:20px;">
+        <table style="width:100%;" class="nav_right">
           <tr>
             <!-- <th id="contact_button" class="small_helvetica">CONTACT</th> -->
-            <th class="small_helvetica" (click)="logout()">LOGOUT</th>
+            <!-- <th class="small_helvetica" (click)="logout()">LOGOUT</th> -->
+            <i class="material-icons" (click)="toggleMenu()">menu</i>
           </tr>
         </table>
       </th>
     </tr>
   </table>
-  <div class="button_row">
-    <button class="btn dard_solid_button" (click)="toggleHeatmap()">heatmap</button>
-    <button class="btn dard_solid_button" (click)="togglePath()">path</button>
-    <button class="btn dard_solid_button" (click)="toggleData()">data</button>
+  <div id="settings">
+    <!-- these are the settingss<br> -->
+    <p>Logout</p>
+    <p>Feedback</p>
   </div>
+  <heatmap></heatmap>
+  <pathmap></pathmap>
+
+
   <div *ngIf="dataShow">
     {{data}}
   </div>
-  <div class="container">
-    <div class="options">
-        <label>Radius </label><input type="range" id="radius" value="10" min="5" max="30" #radius (change)="changeRadius(radius.value)"/><br />
-        <label>Blur </label><input type="range" id="blur" value="10" min="5" max="30" #blur (change)="changeBlur(blur.value)"/>
-    </div>
-    <!-- <canvas id="canvas" width="1000" height="600"></canvas> -->
-    <!-- <canvas id="canvas" width="300" height="170"></canvas> -->
-    <canvas id="canvas" width="600" height="340"></canvas>
-  </div>
-  <div class="path">
+
+  <!-- <div class="path">
     <canvas id="myCanvas" width="578" height="210"></canvas>
-  </div>
+  </div> -->
 </div>
