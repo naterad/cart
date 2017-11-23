@@ -16,5 +16,7 @@
   /*background-color: red;*/
   margin: auto;
   color: white;
-  width: 300px;
+  width: 80%;
+  max-width: 300px;
+  margin-top: 10%;
 }
