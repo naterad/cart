@@ -1,0 +1,11 @@
+.main {
+  /*background-color: blue;*/
+  width: 100%;
+  /*height: 100px;*/
+}
+#map {
+  /*background-color: red;*/
+  border: solid black 1px;
+  background: url('../../../assets/img/store_layout_1.png');
+  background-size: contain;
+}

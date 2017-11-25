@@ -84,3 +84,6 @@ button {
   text-transform: uppercase;
   background: none;
 }
+th:focus {
+  outline: none !important;
+}

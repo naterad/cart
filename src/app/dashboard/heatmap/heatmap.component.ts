@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Component, Input, OnInit, AfterViewChecked } from '@angular/core';
 import { Router } from '@angular/router';
 import { DashboardService } from '../dashboard.service';
 declare var simpleheat: any;
@@ -11,27 +11,80 @@ declare var $: any;
   providers: [DashboardService]
 })
 export class HeatmapComponent implements OnInit {
+  @Input() data: any;
+  firstTime = true;
+  orgWidth = 300;
+  orgHeight = 170;
+  scale = 1;
+  heat = null;
+  frame = null;
+  radius = 10;
+  blur = 10;
+  path = [
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [190, 140, 1],
+    [250, 50, 1],
+    [300, 170, 1],
+    [300, 170, 1],
+    [300, 170, 1],
+    [300, 170, 1],
+    [300, 170, 1],
+    [0, 170, 1],
+    [0, 170, 1],
+    [0, 170, 1],
+    [0, 170, 1],
+    [0, 170, 1],
+    [300, 0, 1],
+    [300, 0, 1],
+    [300, 0, 1],
+    [300, 0, 1],
+    [300, 0, 1],
+    [0, 0, 1],
+    [0, 0, 1],
+    [0, 0, 1],
+    [0, 0, 1],
+    [0, 0, 1]
+  ];
 
   constructor(
     private dashboardService: DashboardService,
     private router: Router
-  ) {
-    // this.dashboardService.getCoordinates(this.email)
-		// 	.subscribe(
-		// 	obj => {
-    //     console.log(obj);
-    //     this.data = JSON.stringify(obj);
-		// 	},
-		// 	error => {
-    //
-		// 	});
-  }
+  ) { }
 
   ngOnInit() {}
 
   ngAfterViewChecked() {
+    if(this.firstTime) {
+      this.firstTime = false;
+      this.resizeMap();
+    }
   }
 
+  resizeMap() {
+    var width = $(".main").width();
+    this.scale = width/this.orgWidth;
+    var canvas = $("#map");
+    canvas[0].width = this.orgWidth * this.scale;
+    canvas[0].height = this.orgHeight * this.scale;
+    console.log(canvas);
+    console.log(this.scale);
+    var context = canvas[0].getContext('2d');
+    // this.heat = simpleheat('map').data(this.path).max(18), this.frame;
+    this.heat = simpleheat('map').data(this.data).max(18), this.frame;
+    this.heat.radius(this.radius, this.blur);
+    this.heat.draw(0.1, this.scale);
+  }
 }
 
 

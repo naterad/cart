@@ -10,7 +10,6 @@ function simpleheat(canvas) {
 
     this._canvas = canvas = typeof canvas === 'string' ? document.getElementById(canvas) : canvas;
     this._ctx = canvas.getContext('2d');
-    // this._ctx.scale(2, 2);
     this._width = canvas.width;
     this._height = canvas.height;
 
@@ -98,12 +97,12 @@ simpleheat.prototype = {
         return this;
     },
 
-    draw: function (minOpacity) {
+    draw: function (minOpacity, scale) {
         if (!this._circle) this.radius(this.defaultRadius);
         if (!this._grad) this.gradient(this.defaultGradient);
 
         var ctx = this._ctx;
-        ctx.scale(2,2);
+        ctx.scale(scale,scale);
 
         ctx.clearRect(0, 0, this._width, this._height);
 

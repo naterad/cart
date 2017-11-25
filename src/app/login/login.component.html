@@ -25,6 +25,7 @@
     <form #f="ngForm">
       <input type="text" placeholder="Email" required [(ngModel)]="user.email_address" name="email_address"><br>
       <input type="password" placeholder="Password" required [(ngModel)]="user.password" name="password"><br>
+      <p class="error small_helvetica">{{error}}</p>
       <br>
       <button class="btn light_transparent_button" [disabled]="!f.form.valid" (click)="login()">Login</button>
     </form>

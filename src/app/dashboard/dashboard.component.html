@@ -8,24 +8,54 @@
       <th style="text-align:right; padding:20px;">
         <table style="width:100%;" class="nav_right">
           <tr>
-            <!-- <th id="contact_button" class="small_helvetica">CONTACT</th> -->
-            <!-- <th class="small_helvetica" (click)="logout()">LOGOUT</th> -->
-            <i class="material-icons" (click)="toggleMenu()">menu</i>
+            <div class="dropdown">
+              <i (click)="toggleSettings()" id="menu-dropdown" class="material-icons dropdown-toggle">menu</i>
+              <div id="settingsDropdown" class="dropdown-content">
+                <a (click)="logout()">Logout</a>
+              </div>
+            </div>
           </tr>
         </table>
       </th>
     </tr>
   </table>
-  <div id="settings">
-    <!-- these are the settingss<br> -->
-    <p>Logout</p>
-    <p>Feedback</p>
+  <div class="button_row">
+    <div class="dropdown">
+    <button (click)="toggleStores()" class="dark_transparent_button dropbtn" id="menu-dropdown">Stores</button>
+      <div id="storesDropdown" class="dropdown-content">
+        <a *ngFor="let store of stores; let i = index" (click)="selectStore(i)">
+          {{store.name}}
+        </a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <button (click)="toggleMaps()" class="dark_transparent_button dropbtn" id="menu-dropdown">Maps</button>
+      <div id="mapsDropdown" class="dropdown-content">
+        <a (click)="showHeatmap()">Heatmap</a>
+        <a (click)="showPathmap()">Pathmap</a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <button (click)="toggleCarts()" class="dark_transparent_button dropbtn" id="menu-dropdown">Carts</button>
+      <div id="cartsDropdown" class="dropdown-content">
+        <a>Coming soon!</a>
+      </div>
+    </div>
+    <div class="dropdown">
+    <button (click)="toggleFilters()" class="dark_transparent_button dropbtn" id="menu-dropdown">Filter</button>
+      <div id="filtersDropdown" class="dropdown-content">
+        <a>Coming soon!</a>
+      </div>
+    </div>
   </div>
-  <heatmap></heatmap>
-  <pathmap></pathmap>
-
-
-  <div *ngIf="dataShow">
+  <div>
+    {{dataPoints}}
+  </div>
+  <div class="padding_10">
+    <heatmap [data]="data" *ngIf="current == 0"></heatmap>
+    <pathmap [data]="data" *ngIf="current == 1"></pathmap>
+  </div>
+  <div>
     {{data}}
   </div>
 

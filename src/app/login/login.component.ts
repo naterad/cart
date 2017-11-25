@@ -10,6 +10,7 @@ import { LoginService } from './login.service';
 })
 
 export class LoginComponent implements OnInit {
+error = "";
 user = {
   "email_address": localStorage.getItem("email"),
   "password": localStorage.getItem("password")
@@ -30,14 +31,22 @@ login(){
   this.loginService.login(this.user.email_address, this.user.password)
     .subscribe(
       obj => {
-        // console.log(obj);
-        // localStorage.setItem("token", obj["token"]);
-        localStorage.setItem("email", this.user.email_address);
-        var link = ['/dashboard'];
-        this.router.navigate(link);
+        console.log(obj);
+        if(obj[0]) {
+          this.error = "";
+          // login successful
+          // localStorage.setItem("token", obj["token"]);
+          localStorage.setItem("email", this.user.email_address);
+          var link = ['/dashboard'];
+          this.router.navigate(link);
+        } else {
+          // login failed
+          this.error = "Incorrect email and/or password";
+        }
       },
       error => {
         console.log(error);
+        this.error = "Something went wrong";
         localStorage.removeItem("token");
       }
     )

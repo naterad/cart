@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { Component, Input, OnInit, AfterViewChecked } from '@angular/core';
 import { Router } from '@angular/router';
 import { DashboardService } from '../dashboard.service';
 declare var simpleheat: any;
@@ -11,20 +11,12 @@ declare var $: any;
   providers: [DashboardService]
 })
 export class PathmapComponent implements OnInit {
+  @Input() data: any;
 
   constructor(
     private dashboardService: DashboardService,
     private router: Router
   ) {
-    // this.dashboardService.getCoordinates(this.email)
-		// 	.subscribe(
-		// 	obj => {
-    //     console.log(obj);
-    //     this.data = JSON.stringify(obj);
-		// 	},
-		// 	error => {
-    //
-		// 	});
   }
 
   ngOnInit() {}
