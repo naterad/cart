@@ -1,11 +1,21 @@
 <!-- <div class="contianer"> -->
 <div>
-  <table style="width:100%;" class="dashboard_nav">
+  <table style="width:100%" class="navbar">
     <tr>
-      <th style="text-align:left;">
-        <img class="" src="/assets/img/black-logo.png" alt="logo" height="65px" >
+      <th class="nav_first">
+        <img class="" src="/assets/img/black-logo.png" alt="logo" height="55px" >
       </th>
-      <th style="text-align:right; padding:20px;">
+      <th class="nav_second">
+        <div class="dropdown">
+        <button (click)="toggleStores()" class="dropbtn" id="menu-dropdown">{{currentStore}}</button>
+          <div id="storesDropdown" class="dropdown-content">
+            <a *ngFor="let store of stores; let i = index" (click)="selectStore(i)">
+              {{store.name}}
+            </a>
+          </div>
+        </div>
+      </th>
+      <th class="nav_third">
         <table style="width:100%;" class="nav_right">
           <tr>
             <div class="dropdown">
@@ -21,28 +31,20 @@
   </table>
   <div class="button_row">
     <div class="dropdown">
-    <button (click)="toggleStores()" class="dark_transparent_button dropbtn" id="menu-dropdown">Stores</button>
-      <div id="storesDropdown" class="dropdown-content">
-        <a *ngFor="let store of stores; let i = index" (click)="selectStore(i)">
-          {{store.name}}
-        </a>
-      </div>
-    </div>
-    <div class="dropdown">
-    <button (click)="toggleMaps()" class="dark_transparent_button dropbtn" id="menu-dropdown">Maps</button>
+    <button (click)="toggleMaps()" class="dropbtn" id="menu-dropdown">Maps</button>
       <div id="mapsDropdown" class="dropdown-content">
         <a (click)="showHeatmap()">Heatmap</a>
         <a (click)="showPathmap()">Pathmap</a>
       </div>
     </div>
     <div class="dropdown">
-    <button (click)="toggleCarts()" class="dark_transparent_button dropbtn" id="menu-dropdown">Carts</button>
+    <button (click)="toggleCarts()" class="dropbtn" id="menu-dropdown">Carts</button>
       <div id="cartsDropdown" class="dropdown-content">
         <a>Coming soon!</a>
       </div>
     </div>
     <div class="dropdown">
-    <button (click)="toggleFilters()" class="dark_transparent_button dropbtn" id="menu-dropdown">Filter</button>
+    <button (click)="toggleFilters()" class="dropbtn" id="menu-dropdown">Filter</button>
       <div id="filtersDropdown" class="dropdown-content">
         <a>Coming soon!</a>
       </div>

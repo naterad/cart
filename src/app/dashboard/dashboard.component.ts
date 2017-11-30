@@ -17,6 +17,7 @@ export class DashboardComponent implements OnInit {
   private sub: any;
   current = 0; // 0=heatmap, 1=pathmap
   stores = null;
+  currentStore = null;
   data = points;
   email = localStorage.getItem("email");
 
@@ -31,6 +32,7 @@ export class DashboardComponent implements OnInit {
         // console.log(obj);
         this.stores = obj;
         if(this.stores.length > 0) {
+          this.currentStore = this.stores[0].name;
           this.dashboardService.getStoreCoordinates24Hours(this.stores[0].id)
           	.subscribe(
           	obj => {
@@ -80,6 +82,7 @@ export class DashboardComponent implements OnInit {
   }
 
   selectStore(index) {
+    this.currentStore = this.stores[index].name;
     this.dashboardService.getStoreCoordinates24Hours(this.stores[index].id)
       .subscribe(
       obj => {

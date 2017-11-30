@@ -55,6 +55,7 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle;
   border:none;
+  border-radius: 3px;
 }
 button {
   padding-right: 30px;
