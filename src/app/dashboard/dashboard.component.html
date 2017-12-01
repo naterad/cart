@@ -1,5 +1,4 @@
-<!-- <div class="contianer"> -->
-<div>
+<div class="container">
   <table style="width:100%" class="navbar">
     <tr>
       <th class="nav_first">
@@ -53,7 +52,7 @@
   <div>
     {{dataPoints}}
   </div>
-  <div class="padding_10">
+  <div class="main_map">
     <heatmap [data]="data" *ngIf="current == 0"></heatmap>
     <pathmap [data]="data" *ngIf="current == 1"></pathmap>
   </div>

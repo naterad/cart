@@ -18,15 +18,16 @@
   background: url('../../assets/img/hardware_blue.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 130%;
+  background-position-y: 0%;
 }
 #slide4 {
   color: white;
   text-align: center;
   background: url('../../assets/img/assorted.jpg');
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position-y: 0%;
 }
 .dark_transparent {
   background-color: rgba(0, 0, 0, 0.3);

@@ -5,7 +5,8 @@
 }
 #map {
   /*background-color: red;*/
-  border: solid black 1px;
+  /*border: solid black 1px;*/
+  box-shadow: 0px 2px 5px rgba(0,0,0,.26);
   background: url('../../../assets/img/store_layout_1.png');
   background-size: contain;
 }

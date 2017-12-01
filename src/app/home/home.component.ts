@@ -15,12 +15,13 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewChecked() {
-    // let self=this;
-    // $("#contact_button").click(function() {
-    //   $('html, body').animate({
-    //       scrollTop: $("#slide-4").offset().top
-    //   }, 600);
-    // });
+
+  }
+
+  scroll(event) {
+    var temp = $(".main").scrollTop();
+    document.getElementById("slide1").style.backgroundPositionY = 0 - (temp/2) + '%';
+    document.getElementById("slide4").style.backgroundPositionY = 400 - (temp/14) + '%';
   }
 
 }

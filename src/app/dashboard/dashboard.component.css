@@ -2,8 +2,10 @@ body { text-align: center; font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
 a { color: #0077ff; }
 .container {
   /*width: 1000px; height: 600px; */
-  text-align: center;
-  margin: 0 auto; position: relative; border: 1px solid #ccc; }
+  background-color: #f2f2f2;
+  /*text-align: center;*/
+  /*margin: 0 auto; position: relative; border: 1px solid #ccc; */
+}
 .options {
   /*position: absolute;
   top: 0; right: 0; */
@@ -22,14 +24,21 @@ a { color: #0077ff; }
   border: solid black 1px;
 }
 #canvas {
-  border: solid black 1px;
+  /*border: solid black 1px;*/
+  box-shadow: 0px 2px 5px rgba(0,0,0,.26);
 }
 .button_row {
-  padding: 10px;
+  padding: 10px 20px 10px;
   padding-bottom: 0px;
 }
 .padding_10 {
   padding: 10px;
+}
+.padding_20 {
+  padding: 20px;
+}
+.main_map {
+  padding: 10px 20px;
 }
 .path {
   margin: auto;
@@ -41,7 +50,7 @@ a { color: #0077ff; }
 }
 .navbar {
   /*height: 100px;*/
-  /*background-color: gray;*/
+  background-color: white;
   box-shadow: 0px 2px 5px rgba(0,0,0,.26);
 }
 .nav_first {
