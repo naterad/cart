@@ -27,7 +27,7 @@
   text-align: center;
   background: url('../../assets/img/assorted.jpg');
   /*background-position: center;*/
-  background-size: 174%;
+  background-size: 186%;
   /*background-size: cover;*/
   background-position-y: 0px;
 }
@@ -104,6 +104,9 @@
   padding-left: 10%;
   padding-right: 10%;
   color:white;
+}
+.email {
+  font-weight: 200;
 }
 
 @media screen and (max-width: 802px) {
