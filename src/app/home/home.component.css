@@ -17,20 +17,22 @@
   background-color: #b3c8d5;
   background: url('../../assets/img/hardware_blue.jpg');
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: 130%;
-  background-position-y: 0%;
+  /*background-repeat: no-repeat;*/
+  /*background-size: 130%;*/
+  background-size: cover;
+  background-position-y: 0px;
 }
 #slide4 {
   color: white;
   text-align: center;
   background: url('../../assets/img/assorted.jpg');
-  background-position: center;
-  background-size: 100%;
-  background-position-y: 0%;
+  /*background-position: center;*/
+  background-size: 174%;
+  /*background-size: cover;*/
+  background-position-y: 0px;
 }
 .dark_transparent {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .dark {
   background-color: #353535;

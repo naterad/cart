@@ -20,8 +20,9 @@ export class HomeComponent implements OnInit {
 
   scroll(event) {
     var temp = $(".main").scrollTop();
-    document.getElementById("slide1").style.backgroundPositionY = 0 - (temp/2) + '%';
-    document.getElementById("slide4").style.backgroundPositionY = 400 - (temp/14) + '%';
+    document.getElementById("slide1").style.backgroundPositionY = 0 + (temp*0.2) + 'px';
+    // document.getElementById("slide4").style.backgroundPositionY = 400 - (temp/14) + '%';
+    document.getElementById("slide4").style.backgroundPositionY = 770 + (temp*0.2) + 'px';
   }
 
 }
